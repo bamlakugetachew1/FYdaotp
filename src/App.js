@@ -20,7 +20,6 @@ function validateQueryParams(searchParams) {
   return missing;
 }
 
-
 function App() {
   const [fydaNumber, setFydaNumber] = useState("");
   const [step, setStep] = useState("enterNumber");
@@ -40,7 +39,7 @@ function App() {
 
   const handleGetOtp = async () => {
     if (fydaNumber.trim().length !== 12 || isNaN(fydaNumber.trim())) {
-      setMessage("Fyda number is required and should be 12 digits. ");
+      setMessage("Fyda number is required and should be 12 digits.");
       return;
     }
 
