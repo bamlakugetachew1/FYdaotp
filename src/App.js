@@ -83,7 +83,7 @@ function App() {
         // const url = `https://api-in-uat.anbesabank.et/api/nid2/2.0.0/callback?code=abc123&state=${params.get(
         //   "state"
         // )}`;
-        const url = `http://localhost:8290/api/nid/callback?code=abc123&state=${params.get(
+        const url = `https://api-in-uat.anbesabank.et/api/nid/1.0.0/callback?code=abc123&state=${params.get(
           "state"
         )}`;
         await fetch(url, {
