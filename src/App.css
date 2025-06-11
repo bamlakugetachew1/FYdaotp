@@ -1,38 +1,127 @@
-.App {
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f0f2f5;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn {
+  background-color: #007bff;
+  border: none;
   color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover:enabled {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn:disabled {
+  background-color: #b0c4de;
+  cursor: not-allowed;
+}
+
+.verify {
+  margin-top: 1.5rem;
+  background-color: #28a745;
+}
+
+.verify:hover:enabled {
+  background-color: #1e7e34;
+}
+
+.otp-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 1rem;
+  flex-wrap: nowrap;
+}
+
+.otp-input {
+  width: 40px;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.message {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.success {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: green;
+  font-weight: bold;
+}
+
+@media (max-width: 400px) {
+  .otp-box {
+    gap: 6px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .otp-input {
+    width: 36px;
+    height: 44px;
+    font-size: 1.25rem;
+  }
+
+  .card {
+    padding: 1.5rem 1rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
   }
 }
+
+.message.error {
+  color: red;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
